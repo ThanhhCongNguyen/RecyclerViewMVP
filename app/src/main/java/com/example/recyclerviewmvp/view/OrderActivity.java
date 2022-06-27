@@ -26,8 +26,6 @@ public class OrderActivity extends AppCompatActivity implements UserInterface {
         binding.orderButton.setOnClickListener(view -> {
             order();
         });
-
-
     }
 
     @Override
