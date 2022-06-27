@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/space_extra"
+    android:layout_marginTop="@dimen/space_default"
+    android:layout_marginBottom="@dimen/space_default"
+    app:cardCornerRadius="@dimen/radius_default"
+    app:cardElevation="@dimen/radius_default">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/space">
+
+        <ImageView
+            android:id="@+id/foodImage"
+            android:layout_width="@dimen/size_of_main_image_view"
+            android:layout_height="@dimen/size_of_main_image_view"
+            android:layout_marginStart="@dimen/space"
+            android:layout_marginTop="@dimen/space_default"
+            android:layout_marginEnd="@dimen/space"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/com_bo_steak_nam_mang_tay" />
+
+        <TextView
+            android:id="@+id/foodName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_default"
+            android:layout_marginBottom="@dimen/space_extra"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/size_of_textview_extra"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/foodPrice"
+            app:layout_constraintEnd_toEndOf="@+id/foodImage"
+            app:layout_constraintStart_toStartOf="@+id/foodImage"
+            app:layout_constraintTop_toBottomOf="@+id/foodImage" />
+
+        <TextView
+            android:id="@+id/foodPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_default"
+            android:layout_marginBottom="@dimen/space_default"
+            android:text="TextView"
+            android:textColor="@color/text_color_price"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/foodImage" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="@dimen/size_of_image_view_small"
+            android:layout_height="@dimen/size_of_image_view_small"
+            android:layout_marginEnd="@dimen/space_default"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+            app:layout_constraintEnd_toStartOf="@+id/imageView5"
+            app:layout_constraintTop_toTopOf="@+id/imageView5"
+            app:srcCompat="@drawable/star" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="@dimen/size_of_image_view_small"
+            android:layout_height="@dimen/size_of_image_view_small"
+            android:layout_marginEnd="@dimen/space_default"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+            app:layout_constraintEnd_toStartOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4"
+            app:srcCompat="@drawable/star" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="@dimen/size_of_image_view_small"
+            android:layout_height="@dimen/size_of_image_view_small"
+            android:layout_marginEnd="@dimen/space_default"
+            app:layout_constraintBottom_toBottomOf="@+id/foodPrice"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/foodPrice"
+            app:srcCompat="@drawable/star" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

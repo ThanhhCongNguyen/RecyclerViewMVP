@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_order">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/space_extra"
+        android:layout_marginTop="@dimen/space_large"
+        android:layout_marginEnd="@dimen/space_extra"
+        android:layout_marginBottom="@dimen/space_extra"
+        android:background="@drawable/conner_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/title_textview"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_large"
+                    android:text="@string/order_food_text"
+                    android:textAlignment="center"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/size_of_text_view_large"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/constraintLayout" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/nameInputLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_extra"
+                    android:layout_marginTop="@dimen/space_large"
+                    android:layout_marginEnd="@dimen/space_extra"
+                    android:hint="@string/enter_your_name_text"
+                    android:textColorHint="@color/text_color"
+                    app:endIconMode="clear_text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/title_textview"
+                    app:startIconDrawable="@drawable/ic_person">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/nameEdittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:textColor="@color/text_color" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/phoneInputLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_extra"
+                    android:hint="@string/phone_text"
+                    android:textColorHint="@color/text_color"
+                    app:endIconMode="clear_text"
+                    app:layout_constraintEnd_toEndOf="@id/nameInputLayout"
+                    app:layout_constraintStart_toStartOf="@+id/nameInputLayout"
+                    app:layout_constraintTop_toBottomOf="@+id/nameInputLayout"
+                    app:startIconDrawable="@drawable/ic_phone">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/phoneEdittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="phone"
+                        android:maxLines="1"
+                        android:textColor="@color/text_color" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/locationInputLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_extra"
+                    android:hint="@string/address_text"
+                    android:textColorHint="@color/text_color"
+                    app:endIconMode="clear_text"
+                    app:layout_constraintEnd_toEndOf="@id/nameInputLayout"
+                    app:layout_constraintStart_toStartOf="@id/nameInputLayout"
+                    app:layout_constraintTop_toBottomOf="@id/phoneInputLayout"
+                    app:startIconDrawable="@drawable/ic_location">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/locationEdittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:textColor="@color/text_color">
+
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_default"
+                    android:layout_marginTop="@dimen/space_extra"
+                    android:text="@string/payment_methods_text"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/size_of_text_view_extra"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/locationInputLayout" />
+
+                <RadioGroup
+                    android:id="@+id/radio_group"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_default"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="@id/locationInputLayout"
+                    app:layout_constraintStart_toStartOf="@id/locationInputLayout"
+                    app:layout_constraintTop_toBottomOf="@id/textView">
+
+                    <RadioButton
+                        android:id="@+id/mobile_banking"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mobile_banking_text"
+                        android:textColor="@color/text_color" />
+
+                    <RadioButton
+                        android:id="@+id/credit_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/credit_cards_text"
+                        android:textColor="@color/text_color" />
+
+                    <RadioButton
+                        android:id="@+id/direct_payment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/direct_payment_text"
+                        android:textColor="@color/text_color" />
+
+                </RadioGroup>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/noteInputLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_extra"
+                    android:hint="@string/notes_text"
+                    android:textColorHint="@color/text_color"
+                    app:endIconMode="clear_text"
+                    app:layout_constraintEnd_toEndOf="@id/radio_group"
+                    app:layout_constraintStart_toStartOf="@id/radio_group"
+                    app:layout_constraintTop_toBottomOf="@id/radio_group"
+                    app:startIconDrawable="@drawable/ic_note">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/noteEdittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:textColor="@color/text_color">
+
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/orderButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_extra"
+                    android:layout_marginBottom="@dimen/space_large"
+                    android:background="@drawable/background_button"
+                    android:text="@string/order_text"
+                    android:textColor="@color/text_color"
+                    app:backgroundTint="@null"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/noteInputLayout"
+                    app:layout_constraintStart_toStartOf="@id/noteInputLayout"
+                    app:layout_constraintTop_toBottomOf="@+id/noteInputLayout" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

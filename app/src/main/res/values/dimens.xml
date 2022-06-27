@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="radius_default">8dp</dimen>
+    <dimen name="space_extra">16dp</dimen>
+    <dimen name="size_of_main_image_view">150dp</dimen>
+    <dimen name="space_default">8dp</dimen>
+    <dimen name="space">4dp</dimen>
+    <dimen name="space_large">32dp</dimen>
+    <dimen name="size_of_text_view_extra">22sp</dimen>
+    <dimen name="size_of_textview_extra">20sp</dimen>
+    <dimen name="size_of_text_view_large">32sp</dimen>
+    <dimen name="size_of_image_view_small">12dp</dimen>
+</resources>

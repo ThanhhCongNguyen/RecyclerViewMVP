@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">RecyclerviewMVP</string>
+    <string name="enter_your_name_text">Enter your name</string>
+    <string name="phone_text">Phone</string>
+    <string name="address_text">Address</string>
+    <string name="payment_methods_text">Payment Methods:</string>
+    <string name="mobile_banking_text">Mobile Banking</string>
+    <string name="credit_cards_text">Credit cards</string>
+    <string name="direct_payment_text">direct payment</string>
+    <string name="notes_text">Notes</string>
+    <string name="order_text">Order</string>
+    <string name="order_food_text">Order Food</string>
+</resources>
